@@ -1,14 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResortInfoDetailComponent } from './resort-info-detail.component';
+import {WeatherComponent} from '../weather/weather.component';
+import {SocialInfoComponent} from '../social-info/social-info.component';
+import {TemperatureComponent} from '../temperature/temperature.component';
+import {ImgUrlPipe} from '../../pipes/imgUrl.pipe';
 
-describe('HotelInfoComponent', () => {
+describe('ResortInfoDetailComponent', () => {
   let component: ResortInfoDetailComponent;
   let fixture: ComponentFixture<ResortInfoDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResortInfoDetailComponent ]
+      // imports: [
+      //   ImgUrlPipe,
+      // ],
+      declarations: [ ResortInfoDetailComponent,
+        WeatherComponent,
+        SocialInfoComponent,
+        TemperatureComponent,
+        ImgUrlPipe,
+        ]
     })
     .compileComponents();
   }));

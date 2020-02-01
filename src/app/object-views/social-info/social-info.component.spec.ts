@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SocialInfoComponent } from './social-info.component';
+import {ImgUrlPipe} from '../../pipes/imgUrl.pipe';
 
 describe('SocialInfoComponent', () => {
   let component: SocialInfoComponent;
@@ -8,7 +9,8 @@ describe('SocialInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SocialInfoComponent ]
+      // imports: [ImgUrlPipe],
+      declarations: [ SocialInfoComponent, ImgUrlPipe ]
     })
     .compileComponents();
   }));

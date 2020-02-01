@@ -1,15 +1,36 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {ResortsWidgetComponent} from './resorts-widget/resorts-widget.component';
+import {ImgUrlPipe} from './pipes/imgUrl.pipe';
+import {ResortInfoBriefComponent} from './object-views/resort-info-brief/resort-info-brief.component';
+import {ResortInfoDetailComponent} from './object-views/resort-info-detail/resort-info-detail.component';
+import {FooterComponent} from './ui-components/footer/footer.component';
+import {TelephonePipe} from './pipes/telephone.pipe';
+import {WeatherComponent} from './object-views/weather/weather.component';
+import {TemperatureComponent} from './object-views/temperature/temperature.component';
+import {SocialInfoComponent} from './object-views/social-info/social-info.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        ResortsWidgetComponent,
+        ImgUrlPipe,
+        TelephonePipe,
+        ResortInfoBriefComponent,
+        ResortInfoDetailComponent,
+        FooterComponent,
+        WeatherComponent,
+        TemperatureComponent,
+        SocialInfoComponent,
+
+
+
       ],
     }).compileComponents();
   }));
@@ -26,10 +47,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ngHomework1');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ngHomework1 app is running!');
-  });
 });

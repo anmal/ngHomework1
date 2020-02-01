@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResortInfoBriefComponent } from './resort-info-brief.component';
+import {TelephonePipe} from '../../pipes/telephone.pipe';
+import {ImgUrlPipe} from '../../pipes/imgUrl.pipe';
 
 describe('ResortInfoBriefComponent', () => {
   let component: ResortInfoBriefComponent;
@@ -8,7 +10,7 @@ describe('ResortInfoBriefComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResortInfoBriefComponent ]
+      declarations: [ ResortInfoBriefComponent, TelephonePipe, ImgUrlPipe ]
     })
     .compileComponents();
   }));
