@@ -15,12 +15,10 @@ export class ResortsWidgetComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getHotel().subscribe(
+    this.dataService.getResorts().subscribe(
       result => {
         this.data = result;
         this.currResort = (this.data.length > 0) ? this.data[0] : null;
-        console.log(this.data);
-        console.log(this.currResort);
       },
       error => {
         this.data = [];

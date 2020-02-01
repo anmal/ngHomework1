@@ -9,7 +9,7 @@ export class DataService {
 
   constructor() { }
 
-  getHotel(): Observable<ResortInfo[]> {
+  getResorts(): Observable<ResortInfo[]> {
      const mockData = [
        {
          img: '1.jpg',
