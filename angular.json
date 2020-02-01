@@ -118,8 +118,13 @@
               "devServerTarget": "ngHomework1:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ngHomework1"
 }
