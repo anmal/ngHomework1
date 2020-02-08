@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SocialInfo} from '../../model/socialInfo';
+import {ISocialInfo} from '../../../shared/model/socialInfo';
 
 @Component({
   selector: 'app-social-info',
@@ -8,7 +8,7 @@ import {SocialInfo} from '../../model/socialInfo';
 })
 export class SocialInfoComponent implements OnInit {
 
-  @Input() object: SocialInfo;
+  @Input() object: ISocialInfo;
 
   constructor() { }
 

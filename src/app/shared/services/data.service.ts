@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {ResortInfo, ResortInfoType} from '../model/resortInfo';
+import {IResortInfo, ResortInfoType} from '../model/resortInfo';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +9,12 @@ export class DataService {
 
   constructor() { }
 
-  getResorts(): Observable<ResortInfo[]> {
-     const mockData = [
+  getResorts(): Observable<IResortInfo[]> {
+     const mockData: IResortInfo[] = [
        {
          img: '1.jpg',
          address: 'Sed perspiciatis',
-         phone: '1285968685',
+         phone: 1285968685,
          weather: {
            title: 'Et harum quidem',
            icon: 'cloud',
@@ -33,7 +33,7 @@ export class DataService {
        {
          img: '3.jpg',
          address: 'Sed perspiciatis2',
-         phone: '1274858693',
+         phone: 1274858693,
          weather: {
            title: 'Et harum quidem2',
            icon: 'cloud',
@@ -50,7 +50,6 @@ export class DataService {
        }
      ];
 
-     const result = JSON.parse(JSON.stringify(mockData));
-     return of(result);
+     return of(mockData);
   }
 }

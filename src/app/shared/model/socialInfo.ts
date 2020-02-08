@@ -1,6 +1,6 @@
 
 
-export class SocialInfo {
+export interface ISocialInfo {
   title: string;
   img: string;
   followers: number;

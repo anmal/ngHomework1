@@ -1,5 +1,5 @@
-import {Weather} from './weather';
-import {SocialInfo} from './socialInfo';
+import {IWeather} from './weather';
+import {ISocialInfo} from './socialInfo';
 
 
 export class ResortInfoType {
@@ -9,12 +9,12 @@ export class ResortInfoType {
 }
 
 
-export class ResortInfo {
+export interface IResortInfo {
   img: string;
   address: string;
   phone: number;
-  weather: Weather;
+  weather: IWeather;
   // tslint:disable-next-line:variable-name
-  social_info: SocialInfo;
+  social_info: ISocialInfo;
   type: string;
 }

@@ -1,14 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResortsWidgetComponent } from './resorts-widget.component';
-import {ResortInfoDetailComponent} from '../object-views/resort-info-detail/resort-info-detail.component';
-import {ResortInfoBriefComponent} from '../object-views/resort-info-brief/resort-info-brief.component';
-import {FooterComponent} from '../ui-components/footer/footer.component';
-import {ImgUrlPipe} from '../pipes/imgUrl.pipe';
-import {WeatherComponent} from '../object-views/weather/weather.component';
-import {SocialInfoComponent} from '../object-views/social-info/social-info.component';
-import {TelephonePipe} from '../pipes/telephone.pipe';
-import {TemperatureComponent} from '../object-views/temperature/temperature.component';
+import {ResortInfoDetailComponent} from './resort-info-detail/resort-info-detail.component';
+import {ResortInfoBriefComponent} from './resort-info-brief/resort-info-brief.component';
+import {FooterComponent} from './footer/footer.component';
+import {ImgUrlPipe} from '../shared/pipes/imgUrl.pipe';
+import {WeatherComponent} from './resort-info-detail/weather/weather.component';
+import {SocialInfoComponent} from './resort-info-detail/social-info/social-info.component';
+import {TelephonePipe} from '../shared/pipes/telephone.pipe';
+import {TemperatureComponent} from './resort-info-detail/weather/temperature/temperature.component';
 
 describe('ResortsWidgetComponent', () => {
   let component: ResortsWidgetComponent;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ResortInfo} from '../model/resortInfo';
-import {DataService} from '../services/data.service';
+import {IResortInfo} from '../shared/model/resortInfo';
+import {DataService} from '../shared/services/data.service';
 
 @Component({
   selector: 'app-resorts-widget',
@@ -9,8 +9,8 @@ import {DataService} from '../services/data.service';
 })
 export class ResortsWidgetComponent implements OnInit {
 
-  public data: ResortInfo[] = [];
-  public currResort: ResortInfo = null;
+  public data: IResortInfo[] = [];
+  public currResort: IResortInfo = null;
 
   constructor(private dataService: DataService) { }
 
@@ -25,7 +25,7 @@ export class ResortsWidgetComponent implements OnInit {
         this.currResort = null; });
   }
 
-  selectResort(obj: ResortInfo) {
+  selectResort(obj: IResortInfo) {
     this.currResort = obj;
   }
 

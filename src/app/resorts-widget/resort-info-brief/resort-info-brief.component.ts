@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ResortInfo} from '../../model/resortInfo';
+import {IResortInfo} from '../../shared/model/resortInfo';
 
 @Component({
   selector: 'app-resort-info-brief',
@@ -8,7 +8,7 @@ import {ResortInfo} from '../../model/resortInfo';
 })
 export class ResortInfoBriefComponent implements OnInit {
 
-  @Input() object: ResortInfo;
+  @Input() object: IResortInfo;
 
   constructor() { }
 

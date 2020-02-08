@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Weather} from '../../model/weather';
+import {IWeather} from '../../../shared/model/weather';
 
 @Component({
   selector: 'app-weather',
@@ -8,7 +8,7 @@ import {Weather} from '../../model/weather';
 })
 export class WeatherComponent implements OnInit {
 
-  @Input() object: Weather;
+  @Input() object: IWeather;
 
   constructor() { }
 

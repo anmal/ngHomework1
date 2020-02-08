@@ -1,5 +1,5 @@
 
-export class Weather {
+export interface IWeather {
   title: string;
   icon: string;
   water: number;

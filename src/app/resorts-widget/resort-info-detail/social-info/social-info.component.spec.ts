@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SocialInfoComponent } from './social-info.component';
-import {ImgUrlPipe} from '../../pipes/imgUrl.pipe';
+import {ImgUrlPipe} from '../../../shared/pipes/imgUrl.pipe';
 
 describe('SocialInfoComponent', () => {
   let component: SocialInfoComponent;
