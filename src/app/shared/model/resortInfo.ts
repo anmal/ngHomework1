@@ -2,13 +2,6 @@ import {IWeather} from './weather';
 import {ISocialInfo} from './socialInfo';
 
 
-export class ResortInfoType {
-  static hotel = 'Hotel';
-  static fishing = 'Fishing';
-  static tour = 'Tour';
-}
-
-
 export interface IResortInfo {
   img: string;
   address: string;
@@ -18,3 +11,13 @@ export interface IResortInfo {
   social_info: ISocialInfo;
   type: string;
 }
+
+
+export class ResortInfoType {
+  static hotel = 'Hotel';
+  static fishing = 'Fishing';
+  static tour = 'Tour';
+  static weather = 'Weather';
+}
+
+

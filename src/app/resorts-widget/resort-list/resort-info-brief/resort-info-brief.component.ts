@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IResortInfo} from '../../shared/model/resortInfo';
+import {IResortInfo} from '../../../shared/model/resortInfo';
 
 @Component({
   selector: 'app-resort-info-brief',

@@ -9,24 +9,21 @@ import {DataService} from '../shared/services/data.service';
 })
 export class ResortsWidgetComponent implements OnInit {
 
-  public data: IResortInfo[] = [];
+  public resortList: IResortInfo[] = null;
   public currResort: IResortInfo = null;
+
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.dataService.getResorts().subscribe(
       result => {
-        this.data = result;
-        this.currResort = (this.data.length > 0) ? this.data[0] : null;
+        this.resortList = result;
+        this.currResort = (this.resortList.length > 0) ? this.resortList[0] : null;
       },
       error => {
-        this.data = [];
-        this.currResort = null; });
+        this.resortList = [];
+        this.currResort = null;
+      });
   }
-
-  selectResort(obj: IResortInfo) {
-    this.currResort = obj;
-  }
-
 }

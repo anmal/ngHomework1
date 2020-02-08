@@ -1,37 +1,14 @@
 
 <h1>Hot Weather Widget</h1>
-
-
-<div class="element">
-  <div class="element-left">
-    <div class="element-bg-img"><img [src]="this.currResort.img | imgUrl" alt="" class="img-responsive"> </div>
-    <div class="element-left-bottom">
-      <div class="ele-strip">
-        <ul>
-          <li><a href="#">Hotel</a></li>
-          <li><a href="#">Fishing</a></li>
-          <li><a href="#">Tours</a></li>
-          <li class="anc-bor"><a href="#">Weather</a></li>
-        </ul>
-      </div>
-      <div class="village">
-        <h3>Righteous indignation & like</h3>
-        <span class="line"> </span>
-        <div class="activity_box">
-          <div class="scrollbar" id="style-2">
-
-             <app-resort-info-brief *ngFor="let item of data" [object]="item" (click)="selectResort(item)">
-             </app-resort-info-brief>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <app-resort-info-detail [object]="currResort"></app-resort-info-detail>
-
+<div class="element" *ngIf="this.resortList; else loading">
+  <app-resorts-list [resortList]="this.resortList" [(currResort)]="this.currResort"></app-resorts-list>
+  <app-resort-info-detail [object]="this.currResort"></app-resort-info-detail>
 </div>
+<ng-template #loading>
+  <div class="copy-right">
+    <p>Loading...</p>
+  </div>
+</ng-template>
 <app-footer></app-footer>
 
 

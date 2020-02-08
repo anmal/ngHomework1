@@ -8,10 +8,11 @@ import { SocialInfoComponent } from './resorts-widget/resort-info-detail/social-
 import { ResortInfoDetailComponent } from './resorts-widget/resort-info-detail/resort-info-detail.component';
 import { ResortsWidgetComponent } from './resorts-widget/resorts-widget.component';
 import { FooterComponent } from './resorts-widget/footer/footer.component';
-import { ResortInfoBriefComponent } from './resorts-widget/resort-info-brief/resort-info-brief.component';
+import { ResortInfoBriefComponent } from './resorts-widget/resort-list/resort-info-brief/resort-info-brief.component';
 import { TelephonePipe } from './shared/pipes/telephone.pipe';
 import { TemperatureComponent } from './resorts-widget/resort-info-detail/weather/temperature/temperature.component';
 import { ImgUrlPipe } from './shared/pipes/imgUrl.pipe';
+import { ResortListComponent } from './resorts-widget/resort-list/resort-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ImgUrlPipe } from './shared/pipes/imgUrl.pipe';
     ResortInfoBriefComponent,
     TelephonePipe,
     TemperatureComponent,
-    ImgUrlPipe
+    ImgUrlPipe,
+    ResortListComponent
   ],
   imports: [
     BrowserModule,
